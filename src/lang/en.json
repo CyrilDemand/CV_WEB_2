@@ -1,0 +1,12 @@
+{
+  "header": "my beautiful header",
+  "about-me-label": "About me",
+  "education-label": "Education",
+  "skills-label": "Skills",
+  "my-experience-label": "Professional experience",
+  "my-interests-label": "Interests",
+  "contact-me-label": "Contact me",
+  "language-label": "Language",
+
+  "about-me-content": "Hi, my name is Cyril Demand and I am a junior software engineer. I am passionate about everything related to programming. I am currently a student at IMT Nord Europe in Villeneuve D'ascq in a software engineer degree, I am on an internship at Worldline as an apprentice engineer. I am looking for an international internship of 8 weeks from July 8, 2024 to August 30, 2024"
+}

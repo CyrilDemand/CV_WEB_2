@@ -1,0 +1,62 @@
+@font-face
+{
+    font-family: raleway_bold;
+    src: url("../fonts/raleway/Raleway-Bold.ttf");
+    font-display: swap;
+}
+
+@font-face
+{
+    font-family: raleway_semi_bold;
+    src: url("../fonts/raleway/Raleway-SemiBold.ttf");
+    font-display: swap;
+}
+
+@font-face
+{
+    font-family: raleway_medium;
+    src: url("../fonts/raleway/Raleway-Medium.ttf");
+    font-display: swap;
+}
+
+@font-face
+{
+    font-family: calibre_semi_bold;
+    src: url("../fonts/calibre/CalibreSemibold.otf");
+    font-display: swap;
+}
+
+@font-face
+{
+    font-family: calibre_medium;
+    src: url("../fonts/calibre/CalibreMedium.otf");
+    font-display: swap;
+}
+
+@font-face
+{
+    font-family: calibre_regular;
+    src: url("../fonts/calibre/CalibreRegular.otf");
+    font-display: swap;
+}
+
+@font-face
+{
+    font-family: calibre_light;
+    src: url("../fonts/calibre/CalibreLight.otf");
+    font-display: swap;
+}
+
+@font-face
+{
+    font-family: proxima_nova_bold;
+    src: url("../fonts/proxima_nova/ProximaNovaBold.otf");
+    font-display: swap;
+}
+
+@font-face
+{
+    font-family: proxima_nova_semi_bold;
+    src: url("../fonts/proxima_nova/ProximaNovaSemibold.otf");
+    font-display: swap;
+}
