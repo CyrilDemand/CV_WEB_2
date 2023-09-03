@@ -35,7 +35,7 @@ function Contact() {
                     </div>
                     <div className="social_line">
                         <div className="social_link">
-                            <a href="mailto: angel.uriot@gmail.com" target="_blank">
+                            <a href="mailto: cydemand@gmail.com" target="_blank">
                                 <img src={mail} alt="mail" width="50px" height="50px"/>
                             </a>
                             <div className="social_text">
