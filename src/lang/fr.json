@@ -1,14 +1,13 @@
 {
-  "header": "mon beau header",
-  "about-me-label": "à propos de moi",
-  "education-label": "parcours scolaire",
-  "skills-label": "compétences",
-  "my-experience-label": "expériences professionel",
-  "my-interests-label": "passions",
-  "contact-me-label": "contactez-moi",
-  "language-label": "langue",
-
-  "about-me-content": "Bonjour je m'appelle Cyril Demand, je suis un apprenti ingénieur en informatique. Je suis passionné par le tout ce qui touche à la programmation. Je suis actuellement école d'ingénieur à l'IMT Nord Europe situé à Villeneuve D'ascq, je suis en alternance chez Worldline en tant que qu'apprenti ingénieur. Je suis à la recherche d'un stage international de 8 semaines du 8 juillet 2024 au 30 août 2024"
-
-
+  "headerHome": "Accueil",
+  "headerAboutMe": "A propos de moi",
+  "headerProjects": "projets",
+  "headerSkills": "compétences",
+  "headerExperience": "expériences",
+  "headerContact": "contactez-moi",
+  "homeHi": "Bonjour, je m'appelle",
+  "homeJob": "ingénieur en informatique",
+  "homeDescription": "Je suis un apprenti ingénieur en informatique à ",
+  "homeDescription2": "Je suis à la recherche d'un stage international dans l'informatique de 8 semaines du 8 juillet 2024 au 15 septembre 2024",
+  "homeGetStarted": "Commencer"
 }

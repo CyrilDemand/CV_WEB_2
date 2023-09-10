@@ -50,7 +50,7 @@
 {
     display: inline-block;
     position: relative;
-    color: #9d2808;
+    color: #faba00;
     text-decoration: none;
 }
 
@@ -84,12 +84,12 @@
     justify-content: center;
     align-items: center;
     pointer-events: all;
-    border: 2px solid #9d2808;
+    border: 2px solid #faba00;
     padding: 15px 35px 15px 40px;
     border-radius: 40px;
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
-    color: #9d2808;
+    color: #faba00;
     text-decoration: none;
     background-color: none;
     transition: background-color 0.3s ease;

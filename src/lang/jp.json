@@ -1,4 +1,10 @@
 {
+  "headerHome": "ホーム",
+  "headerAboutMe": "私について",
+  "headerProjects": "プロジェクト",
+  "headerSkills": "スキル",
+  "headerExperience": "経験",
+  "headerContact": "連絡先",
   "header": "拙いヘッダー",
   "about-me-label": "私について",
   "education-label": "学校生活",
