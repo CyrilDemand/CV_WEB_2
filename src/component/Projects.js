@@ -34,14 +34,14 @@ function Projects({projecst, experience}) {
             return (
                 <div className={`project ${inverted ? 'inverted' : ''}`}>
                     <div className="project_text">
-                        <div class="type">
+                        <div className="type">
                             <span>{project.date}</span>
                             <span>•</span>
-                            <span>{project.type[language]}</span>
+                            <span>{project.type[language] || project.type.en}</span>
                         </div>
                         <a class="project_title" href={`${project.links}`} target="_blank">{project.name[language]}</a>
-                        <div class="text"><p>{project.description[language]}</p></div>
-                        <div class="tags">{project.technologies}</div>
+                        <div className="text"><p>{project.description[language] || project.description.en}</p></div>
+                        <div className="tags">{project.technologies}</div>
                         { projecst ? <div className="links">
                             <a className="github" href={project.link} target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.05 20.31">
@@ -55,7 +55,7 @@ function Projects({projecst, experience}) {
                         </div> : null }
 
                     </div>
-                    <div class="project_view">
+                    <div className="project_view">
                         <a href={project.link} target="_blank">
                             <img src={project.image}/>
                         </a>
@@ -64,19 +64,19 @@ function Projects({projecst, experience}) {
             );
         }else{
             return (
-                <div class="project" style={{backgroundImage: `url(${project.image})`, backgroundSize:"cover"}}  >
-                    <div class="project_text">
-                        <div class="type">
+                <div className="project" style={{backgroundImage: `url(${project.image})`, backgroundSize:"cover"}}  >
+                    <div className="project_text">
+                        <div className="type">
                             <span>{project.type}</span>
                             <span></span>
                             <span>{project.date}</span>
                         </div>
-                        <a class="project_title" href={project.link} target="_blank">${project.title}</a>
-                        <div class="text"><p>{project.description}</p></div>
-                        <div class="tags">` + tags + `</div>
-                        <div class="links">
-                            <a class="github" href={project.link} target="_blank">
-                                <span class="bubble">See the code</span>
+                        <a className="project_title" href={project.link} target="_blank">${project.title}</a>
+                        <div className="text"><p>{project.description}</p></div>
+                        <div className="tags">` + tags + `</div>
+                        <div className="links">
+                            <a className="github" href={project.link} target="_blank">
+                                <span className="bubble">See the code</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.05 20.31"><g><path d="M7.26 16.34c-4.11 1.23-4.11-2.06-5.76-2.47M13 18.81V15.62a2.78 2.78 0 0 0-.77-2.15c2.59-.28 5.3-1.26 5.3-5.76a4.46 4.46 0 0 0-1.23-3.08 4.18 4.18 0 0 0-.08-3.11s-1-.29-3.22 1.22a11 11 0 0 0-5.76 0C5 1.23 4 1.52 4 1.52A4.18 4.18 0 0 0 4 4.63 4.48 4.48 0 0 0 2.73 7.74c0 4.46 2.72 5.44 5.31 5.76a2.8 2.8 0 0 0-.78 2.12v3.19"/></g></svg>
                             </a>
                         </div>
@@ -89,22 +89,22 @@ function Projects({projecst, experience}) {
     function addProject(project) {
 
         return (
-            <div class="other_project">
-                <div class="other_project_content">
-                    <div class="header">
-                        <div class="logos">
+            <div className="other_project">
+                <div className="other_project_content">
+                    <div className="header">
+                        <div className="logos">
                             <img src="${project.logo}" alt="" width="45px" height="45px"/>
-                            <div class="links">
+                            <div className="links">
 
-                                <a class="github" href="${project.links[1]}" aria-label="github" target="_blank">
+                                <a className="github" href="${project.links[1]}" aria-label="github" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.05 20.31"><g><path d="M7.26 16.34c-4.11 1.23-4.11-2.06-5.76-2.47M13 18.81V15.62a2.78 2.78 0 0 0-.77-2.15c2.59-.28 5.3-1.26 5.3-5.76a4.46 4.46 0 0 0-1.23-3.08 4.18 4.18 0 0 0-.08-3.11s-1-.29-3.22 1.22a11 11 0 0 0-5.76 0C5 1.23 4 1.52 4 1.52A4.18 4.18 0 0 0 4 4.63 4.48 4.48 0 0 0 2.73 7.74c0 4.46 2.72 5.44 5.31 5.76a2.8 2.8 0 0 0-.78 2.12v3.19"/></g></svg>
                                 </a>
                             </div>
                         </div>
                         <a href={project.link} target="_blank" class="project_title">{project.title}</a>
-                        <p class="text">{project.description}</p>
+                        <p className="text">{project.description}</p>
                     </div>
-                    <div class="tags"> {project.technologies} </div>
+                    <div className="tags"> {project.technologies} </div>
                 </div>
             </div>
         )
