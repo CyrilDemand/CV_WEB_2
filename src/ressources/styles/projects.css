@@ -491,3 +491,8 @@
 #projects_section svg{
     width: 30px;
 }
+
+.logos img{
+    fill: white;
+    stroke: white;
+}

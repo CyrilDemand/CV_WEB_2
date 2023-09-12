@@ -12,6 +12,19 @@ function Skills(props) {
     const [selectorTop, setSelectorTop] = useState(0);
     const [selectorHeight, setSelectorHeight] = useState(25);
 
+
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+    const setWindowDimensions = () => {
+        setWindowWidth(window.innerWidth)
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', setWindowDimensions);
+        return () => {
+            window.removeEventListener('resize', setWindowDimensions)
+        }
+    }, [])
+
     function setTruc(type) {
          setType(type);
          setSelectorTop(list.indexOf(type) * (100/list.length));
@@ -30,33 +43,75 @@ function Skills(props) {
     ];
 
     useEffect(() => {
-        setSelectorHeight(document.querySelectorAll(".menu")[1].clientHeight/list.length);
+        const categoryElement = document.getElementById("category");
+        if (categoryElement) {
+            console.log(categoryElement);
+            setSelectorHeight(categoryElement.offsetHeight);
+        }
     }, []);
+
 
     const selectorStyle= {
         top: `${selectorTop}%`,
         height: `${selectorHeight}px`
     }
-    return (
-        <section className="section" id="skills_section" style={{transform: "skewY(-5deg)"}}>
-            <div className="content leaning" style={{transform: "skewY(5deg)"}}>
-                <span className="section_title">What are my Skills?</span>
-                <div className="skills_content">
-                    <div className="box">
-                        <div className="menu">
-                            <div className={"selector"} style={selectorStyle}></div>
-                            {list.map((item, index) => (
-                                <div className={"category"} key={index} onClick={(e) => setTruc(item)}>
-                                    <p>{item.name}</p>
-                                </div>
-                            ))}
+    console.log(skills)
+
+    if (windowWidth > 930) {
+        return (
+            <section className="section" id="skills_section" style={{transform: "skewY(-5deg)"}}>
+                <div className="content leaning" style={{transform: "skewY(5deg)"}}>
+                    <span className="section_title">What are my Skills?</span>
+                    <div className="skills_content">
+                        <div className="box">
+                            <div className="menu" id="menu">
+                                <div className={"selector"} style={selectorStyle}></div>
+                                {list.map((item, index) => (
+                                    <div className={"category"} id="category" key={index} onClick={(e) => setTruc(item)}>
+                                        <p>{item.name}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            <SkillBox type={type.object}></SkillBox>
                         </div>
-                        <SkillBox type={type.object}></SkillBox>
                     </div>
                 </div>
-            </div>
-        </section>
-    );
+            </section>
+        );
+    }else{
+        return (
+            <section className="section" id="skills_section" style={{transform: "skewY(-5deg)"}}>
+                <div className="content leaning" style={{transform: "skewY(5deg)"}}>
+                    <span className="section_title">What are my Skills?</span>
+                    <div className="skills_content">
+                        <div className="box">
+                            {list.map((item, index) => (
+                                <div>
+                                    <div className="category_title">{item.name}</div>
+                                    <div className="box_content">
+                                        <div className="skills_list">
+                                            {item.object.map((e, index) => (
+                                                <div className="skill">
+                                                    <img src={e.image}/>
+                                                    <div className="skill_name">
+                                                        <p>{e.name}</p>
+                                                    </div>
+                                                </div>
+                                            ))
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+
+                            ))}
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+    }
+
 }
 
 export default Skills;

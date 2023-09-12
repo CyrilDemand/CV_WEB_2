@@ -2,8 +2,9 @@ import React from 'react';
 import mode from "../img/mode.png";
 import carte_aux_tresors from "../img/carte_aux_tresors.jpg";
 import lightflix from "../img/lightflix.png";
-import moi from "../img/moi-1.jpg";
-
+import nn from "../svgs/projects/Neural_network.svg"
+import ds from "../svgs/projects/Nuclear_reactor_simulation.svg"
+import http from "../svgs/projects/server.svg"
 export const projects = {
     projectsImaged : [
         {
@@ -91,27 +92,84 @@ export const projects = {
     projectsWithoutImage: [
         {
             project: {
-                name: "neural network",
-                type: "personnal",
+                name: {
+                    en: "neural network",
+                    fr: "réseau de neurones",
+                    es: "red neuronal",
+                    jp: "ニューラルネットワーク"
+                },
+                type: {
+                    en: "personnal",
+                    fr: "personnel",
+                    es: "personal",
+                    jp: "個人的な"
+                },
                 date: "2023",
-                description: "A neural network in rust.",
+                description: {
+                    en: "A neural network in rust.",
+                    fr: "Un réseau de neurones en Rust.",
+                    es: "Una red neuronal en Rust.",
+                    jp: "Rustのニューラルネットワーク。"
+                },
                 technologies: "rust",
-                link: "https://github.com/CyrilDemand/treasure_map",
-                image: moi,
+                link: "https://github.com/CyrilDemand/neural_network",
+                image: nn
             },
 
         },
         {
             project: {
-                name: "Project 1",
-                type: "school",
-                date: "2021",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl vitae tincidunt ",
-                technologies: "Flutter, Dart, Firebase",
-                link: "https://github.com/CyrilDemand/treasure_map",
-                image: "'../ressources/img/moi-1.jpg'",
+                name: {
+                    en: "data science project",
+                    fr: "projet de science des données",
+                    es: "proyecto de ciencia de datos",
+                    jp: "データサイエンスプロジェクト"
+                },
+                type: {
+                    en: "school",
+                    fr: "école",
+                    es: "escuela",
+                    jp: "学校"
+                },
+                date: "2023",
+                description: {
+                    en: "A data science project in python that analyze data from a csv file.",
+                    fr: "Un projet de science des données en python qui analyse les données d'un fichier csv.",
+                    es: "Un proyecto de ciencia de datos en python que analiza datos de un archivo csv.",
+                    jp: "csvファイルからデータを分析するPythonのデータサイエンスプロジェクト。"
+                },
+                technologies: "Python",
+                link: "https://github.com/CyrilDemand/projet_data_science",
+                image: ds
             },
 
-        }
+        },
+        {
+            project: {
+                name: {
+                    en: "http server",
+                    fr: "serveur http",
+                    es: "servidor http",
+                    jp: "httpサーバー"
+                },
+                type: {
+                    en: "school",
+                    fr: "école",
+                    es: "escuela",
+                    jp: "学校"
+                },
+                date: "2023",
+                description: {
+                    en: "A basic http server in C that can handle multiple clients at the same time.",
+                    fr: "Un serveur http de base en C qui peut gérer plusieurs clients en même temps.",
+                    es: "Un servidor http básico en C que puede manejar múltiples clientes al mismo tiempo.",
+                    jp: "同時に複数のクライアントを処理できるCでの基本的なhttpサーバー。"
+                },
+                technologies: "C",
+                link: "https://github.com/CyrilDemand/ServeurHTTP",
+                image: http
+            },
+
+        },
     ]
 }

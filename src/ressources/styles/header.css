@@ -99,6 +99,7 @@ details[open] {
 }
 
 summary {
+    height: 30%;
     padding: 1rem;
     cursor: pointer;
     border-radius: 5px;
@@ -218,3 +219,48 @@ label span {
     border: 1px solid #727272;
     border-radius: 3px;
 }
+#header .menu_icon
+{
+    display: block;
+    pointer-events: all;
+    padding: 20px 20px 20px 20px;
+    margin-right: -20px;
+    cursor: pointer;
+    stroke: white;
+    stroke-width: 10px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    height: 30px;
+    transition: stroke 0.2s ease;
+    float: right;
+}
+
+#header .menu_icon:hover
+{
+    stroke: blue;
+}
+
+.language-select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none; /* Pour supprimer l'apparence par défaut du navigateur */
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path d="M5 8l5 5 5-5H5z" fill="%232C3E50"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.language-select:hover {
+    border-color: #888;
+}
+
+.language-select:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+

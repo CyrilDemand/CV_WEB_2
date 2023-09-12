@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState } from 'react';
 import fr from '../lang/fr.json';
 import en from '../lang/en.json';
 import jp from '../lang/jp.json';
+import es from '../lang/es.json';
 
 const LanguageContext = createContext();
 
@@ -28,6 +29,9 @@ export const LanguageProvider = ({ children }) => {
                 break;
             case "jp":
                 setData(jp);
+                break;
+            case "es":
+                setData(es);
                 break;
             default:
                 setData(en);

@@ -1,96 +1,151 @@
 import React from 'react';
 import '../ressources/styles/header.css';
+import '../ressources/styles/menu.css';
 import { useEffect, useState } from "react";
 import {useLanguage} from "./LanguageContext";
 
 function Header(props) {
-    const [scrollDirection, setScrollDirection] = useState("down");
-    const [lastScrollTop, setLastScrollTop] = useState(0);
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const [headerVisible, setHeaderVisible] = useState(true);
 
-    const { changeLangue, data } = useLanguage();
 
-    function handleScroll() {
-        let st = document.documentElement.scrollTop;
-        let currentScrollDirection = (st > lastScrollTop) ? "down" : "up";
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
-        if(currentScrollDirection === "down"){
-            document.getElementById("header_div").style.top = "-100px";
-        } else {
-            document.getElementById("header_div").style.top = "0";
-        }
-
-        setScrollDirection(currentScrollDirection);
-        setLastScrollTop(st <= 0 ? 0 : st);
-        console.log(currentScrollDirection);
+    const {language, data, changeLangue } = useLanguage();
+    const setWindowDimensions = () => {
+        setWindowWidth(window.innerWidth)
     }
 
 
     useEffect(() => {
+        window.addEventListener('resize', setWindowDimensions);
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > lastScrollY) {
+                // Scrolling down
+                setHeaderVisible(false);
+            } else {
+                // Scrolling up
+                setHeaderVisible(true);
+            }
+
+            setLastScrollY(currentScrollY);
+        };
+
         window.addEventListener('scroll', handleScroll);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [lastScrollY]);
+
+    const showMenu = () => {
+        document.getElementById("menu_div").style.transform= "translateX(0px)";
+    }
+
+    const closeMenu = () => {
+        document.getElementById("menu_div").style.transform= "translateX(clamp(0px, 100%, 400px))";
+    }
+
+    const languages = [
+        { code: 'fr', label: 'French (FR)' },
+        { code: 'en', label: 'English' },
+        { code: 'jp', label: 'Japanese' },
+        { code: 'es', label: 'Spanish' }
+    ];
+
+    const handleLanguageChange = (e) => {
+        const newLang = e.target.value;
+        changeLangue(newLang); // Mettez à jour la langue actuelle dans le contexte
+    }
+
 
     const selectLanguage = () => {
         return (
-
-            <details className="custom-select">
-                <summary className="radios">
-                    <input type="radio" name="item" id="default" title="Language" checked/>
-                    <input type="radio" name="item" id="item1" title="Item 1"/>
-                    <input type="radio" name="item" id="item2" title="Item 2"/>
-                    <input type="radio" name="item" id="item3" title="Item 3"/>
-                    <input type="radio" name="item" id="item4" title="Item 4"/>
-                </summary>
-                <ul className="list">
-                    <li onClick={() => changeLangue("fr")}>
-                        <label htmlFor="item1">
-                            French (FR)
-                            <span></span>
-                        </label>
-                    </li>
-                    <li onClick={() => changeLangue("en")}>
-                        <label htmlFor="item2">English</label>
-                    </li>
-                    <li onClick={() => changeLangue("jp")}>
-                        <label htmlFor="item3">Japanese</label>
-                    </li>
-                    <li onClick={() => changeLangue("es")}>
-                        <label htmlFor="item4">Spanish</label>
-                    </li>
-                </ul>
-            </details>
+            <select
+                className="language-select"
+                onChange={handleLanguageChange}
+                value={language} // Utilisez la langue actuelle comme valeur par défaut
+            >
+                {languages.map(lang => (
+                    <option key={lang.code} value={lang.code}>
+                        {lang.label}
+                    </option>
+                ))}
+            </select>
         );
     }
+
     return (
+        <div id={"header_section"} className={headerVisible ? '' : 'hidden'}>
+
+
         <div id={"header_div"}>
-            <header id={"header"}>
-                <nav className="nav">
-                    <div className="menu">
-                        <ol>
-                            <li>
-                                {selectLanguage()}
-                            </li>
-                            <li className="home"><a className="not_button" href="#">{data.headerHome}</a></li>
-                            <li className="about"><a className="not_button" href="#">{data.headerAboutMe}</a></li>
-                            <li className="projects"><a className="not_button" href="#">{data.headerProjects}</a>
-                            </li>
-                            <li className="skills"><a className="not_button" href="#">{data.headerSkills}</a></li>
-                            <li className="experience"><a className="not_button"
-                                                                       href="#">{data.headerExperience}</a></li>
-                            <li className="contact">
-                                <a className="button" href="#">
-                                    <p>{data.headerContact}</p>
-                                </a>
-                            </li>
-                        </ol>
-                    </div>
-                </nav>
-            </header>
+                <header id={"header"}>
+                    <nav className="nav">
+                        <div className="menu" style={{display: windowWidth>780 ? "block" : "none"}}>
+                            <ol>
+                                <li>
+                                    {selectLanguage()}
+                                </li>
+                                <li className="home"><a className="not_button" href="#home_section">{data.headerHome}</a></li>
+                                <li className="about"><a className="not_button" href="#about_section">{data.headerAboutMe}</a></li>
+                                <li className="projects"><a className="not_button" href="#projects_section">{data.headerProjects}</a>
+                                </li>
+                                <li className="skills"><a className="not_button" href="#skills_section">{data.headerSkills}</a></li>
+                                <li className="experience"><a className="not_button"
+                                                              href="#experience_section">{data.headerExperience}</a></li>
+                                <li className="contact">
+                                    <a className="button" href="#contact_section">
+                                        <p>{data.headerContact}</p>
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                        <svg style={{display: windowWidth<780 ? "block" : "none"}} onClick={showMenu} className="menu_icon" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="10" y1="10" x2="130" y2="10"/>
+                            <line x1="30" y1="50" x2="130" y2="50"/>
+                            <line x1="50" y1="90" x2="130" y2="90"/>
+                        </svg>
+                    </nav>
+                </header>
+            </div>
+
+            <div id="menu_div" style={{display: windowWidth<780 ? "block" : "none"}}>
+                <svg onClick={closeMenu} className="menu_icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="10" y1="10" x2="90" y2="90"/>
+                    <line x1="10" y1="90" x2="90" y2="10"/>
+                </svg>
+                <div className="menu">
+                    <ol>
+                        <li className="home"><a className="not_button" href=""></a></li>
+                        <li>
+                            {selectLanguage()}
+                        </li>
+                        <li className="home"><a className="not_button" href="#home_section">{data.headerHome}</a></li>
+                        <li className="about"><a className="not_button" href="#about_section">{data.headerAboutMe}</a></li>
+                        <li className="projects"><a className="not_button" href="#projects_section">{data.headerProjects}</a></li>
+                        <li className="skills"><a className="not_button" href="#skills_section">{data.headerSkills}</a></li>
+                        <li className="experience"><a className="not_button" href="#experience_section">{data.headerExperience}</a></li>
+                        <li className="contact">
+                            <a className="button" href="#contact_section">
+                                <p>{data.headerContact}</p>
+                                <svg className="button_arrow" xmlns="http://www.w3.org/2000/svg"
+                                     viewBox="0 0 17.69 17.39">
+                                    <g>
+                                        <path className="path_1" d="M8.9 12.4 L8.9 12.4"/>
+                                        <path className="path_2" d="M16.2 5 8.9 12.4 1.5 5"/>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
         </div>
-    );
+        );
+
 }
 
 export default Header;

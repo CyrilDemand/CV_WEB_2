@@ -67,12 +67,12 @@ function Projects({projecst, experience}) {
                 <div className="project" style={{backgroundImage: `url(${project.image})`, backgroundSize:"cover"}}  >
                     <div className="project_text">
                         <div className="type">
-                            <span>{project.type}</span>
+                            <span>{project.type[language]}</span>
                             <span></span>
                             <span>{project.date}</span>
                         </div>
                         <a className="project_title" href={project.link} target="_blank">${project.title}</a>
-                        <div className="text"><p>{project.description}</p></div>
+                        <div className="text"><p>{project.description[language]}</p></div>
                         <div className="tags">` + tags + `</div>
                         <div className="links">
                             <a className="github" href={project.link} target="_blank">
@@ -93,7 +93,7 @@ function Projects({projecst, experience}) {
                 <div className="other_project_content">
                     <div className="header">
                         <div className="logos">
-                            <img src="${project.logo}" alt="" width="45px" height="45px"/>
+                            <img src={project.image} alt="" width="45px" height="45px"  />
                             <div className="links">
 
                                 <a className="github" href="${project.links[1]}" aria-label="github" target="_blank">
@@ -102,7 +102,7 @@ function Projects({projecst, experience}) {
                             </div>
                         </div>
                         <a href={project.link} target="_blank" class="project_title">{project.title}</a>
-                        <p className="text">{project.description}</p>
+                        <p className="text">{project.description[language]}</p>
                     </div>
                     <div className="tags"> {project.technologies} </div>
                 </div>

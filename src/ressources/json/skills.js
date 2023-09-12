@@ -19,6 +19,10 @@ import html from "../svgs/skills/Html.svg";
 import css from "../svgs/skills/Css.svg";
 import thymeleaf from "../svgs/skills/Thymeleaf.svg";
 import android_studio from "../svgs/skills/Andoird.svg";
+import french from "../svgs/flags/french.svg";
+import english from "../svgs/flags/uk.svg";
+import spanish from "../svgs/flags/spain.svg";
+import japanese from "../svgs/flags/japan.svg";
 export const skills = {
   "software_developpement": [
     {
@@ -131,19 +135,19 @@ export const skills = {
   "languages": [
     {
         "name": "French",
-        "image": null
+        "image": french
     },
     {
       "name": "English (B2)",
-      "image": null
+      "image": english
     },
     {
       "name": "Spanish (A2)",
-      "image": null
+      "image": spanish
     },
     {
       "name": "Japanese (N4)",
-      "image": null
+      "image": japanese
     }
   ]
 }
