@@ -18,7 +18,7 @@ function Home(props) {
                     {data.homeDescription2}
                 </p>
                 <div className="home_button">
-                    <a className="button" href="#about">
+                    <a className="button" href="#about_section">
                         <p>{data.homeGetStarted}</p>
                     </a>
                 </div>

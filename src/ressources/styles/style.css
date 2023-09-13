@@ -99,3 +99,7 @@
 {
     background-color: var(--fade_light_blue);
 }
+
+html {
+    scroll-behavior: smooth;
+}

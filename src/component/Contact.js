@@ -4,12 +4,14 @@ import linkedin from '../ressources/svgs/contact/Linkedin.svg';
 import github from '../ressources/svgs/contact/GitHub.svg';
 import mail from '../ressources/svgs/contact/Mail.svg';
 import discord from '../ressources/svgs/contact/Discord.svg';
+import {useLanguage} from "./LanguageContext";
 function Contact() {
+    const { data } = useLanguage();
 
     return(
         <section className="section" id="contact_section">
             <div className="content leaning">
-                <span className="section_title">How to contact me?</span>
+                <span className="section_title">{data.myContactTitle}</span>
                 <div className="contact_content">
                     <div className="social_line">
                         <a className="social_link" href="https://www.linkedin.com/in/cyril-demand-0a30a918b/" target="_blank">

@@ -1,4 +1,4 @@
-#projects_section
+#projects_section, #experience_section
 {
     background-color: #548c2f;
 }
@@ -8,41 +8,13 @@
     background-color: #548c2f;
 }
 
-#projects_section .section_title
+#projects_section .section_title, #experience_section .section_title
 {
     color: white;
     margin-bottom: 60px;
 }
 
-#projects_section .project.in_animation
-{
-    opacity: 0;
-    transform: translateY(70px);
-    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out, filter 0.3s ease;
-}
-
-
-#projects_section .sort_choices .label
-{
-    color: white;
-    font-family: raleway_semi_bold;
-    font-size: 17px;
-}
-
-#projects_section .sort_choices .choice
-{
-    color: lightblue;
-    font-family: raleway_semi_bold;
-    font-size: 15px;
-    cursor: pointer;
-    border-radius: 100px;
-    padding: 9px 18px 9px 18px;
-    border: 2px solid lightblue;
-    transition: background-color 0.2s ease-in-out;
-}
-
-
-#projects_section .projects_content
+#projects_section .projects_content, #experience_section .projects_content
 {
     display: flex;
     justify-content: center;
@@ -55,7 +27,7 @@
 
 @media screen and (max-width: 1125px)
 {
-    #projects_section .projects_content
+    #projects_section .projects_content, #experience_section .projects_content
     {
         gap: clamp(20px, 5vw, 100px);
     }
@@ -63,13 +35,13 @@
 
 @media screen and (max-width: 780px)
 {
-    #projects_section .projects_content
+    #projects_section .projects_content, #experience_section .projects_content
     {
         gap: 35px;
     }
 }
 
-#projects_section .project
+#projects_section .project, #experience_section .project
 {
     display: flex;
     justify-content: center;
@@ -78,14 +50,14 @@
     padding-right: clamp(0px, calc(18vw - 234px), 60px);
 }
 
-#projects_section .project.inverted
+#projects_section .project.inverted, #experience_section .project.inverted
 {
     flex-direction: row-reverse;
     padding-left: clamp(0px, calc(18vw - 234px), 60px);
     padding-right: 0px;
 }
 
-#projects_section .project_view
+#projects_section .project_view, #experience_section .project_view
 {
     z-index: 5;
     display: flex;
@@ -93,7 +65,7 @@
     align-items: center;
 }
 
-#projects_section .project_view a
+#projects_section .project_view a, #experience_section .project_view a
 {
     display: flex;
     justify-content: center;
@@ -105,19 +77,12 @@
     transition: filter 0.3s ease;
 }
 
-#projects_section .project_view a:hover
+#projects_section .project_view a:hover, #experience_section .project_view a:hover
 {
     filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.7));
 }
 
-#projects_section .project_view video
-{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-#projects_section .project_view img
+#projects_section .project_view img, #experience_section .project_view img
 {
 
     max-height: 50vh;
@@ -125,7 +90,7 @@
     border-radius: 15px;
 }
 
-#projects_section .project_text
+#projects_section .project_text, #experience_section .project_text
 {
     z-index: 10;
     position: relative;
@@ -136,14 +101,14 @@
     margin-right: -100px;
 }
 
-#projects_section .inverted .project_text
+#projects_section .inverted .project_text, #experience_section .inverted .project_text
 {
     align-items: flex-end;
     margin-left: -100px;
     margin-right: 0px;
 }
 
-#projects_section .project_text .type
+#projects_section .project_text .type, #experience_section .project_text .type
 {
     display: flex;
     width: 100%;
@@ -157,14 +122,14 @@
     margin-bottom: 10px;
 }
 
-#projects_section .inverted .project_text .type
+#projects_section .inverted .project_text .type, #experience_section .inverted .project_text .type
 {
     margin-left: 0px;
     margin-right: 15px;
     flex-direction: row-reverse;
 }
 
-#projects_section .project_text .project_title
+#projects_section .project_text .project_title, #experience_section .project_text .project_title
 {
     font-family: calibre_semi_bold;
     font-size: 32px;
@@ -175,18 +140,18 @@
     transition: color 0.2s ease;
 }
 
-#projects_section .inverted .project_text .project_title
+#projects_section .inverted .project_text .project_title, #experience_section .inverted .project_text .project_title
 {
     margin-left: 0px;
     margin-right: 15px;
 }
 
-#projects_section .project_text .project_title:hover
+#projects_section .project_text .project_title:hover, #experience_section .project_text .project_title:hover
 {
     color: lightblue;
 }
 
-#projects_section .project_text .text
+#projects_section .project_text .text, #experience_section .project_text .text
 {
     background-color: #548c2f;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
@@ -196,12 +161,12 @@
     transition: box-shadow 0.3s ease;
 }
 
-#projects_section .project_text .text:hover
+#projects_section .project_text .text:hover, #experience_section .project_text .text:hover
 {
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.6);
 }
 
-#projects_section .project_text .text p
+#projects_section .project_text .text p, #experience_section .project_text .text p
 {
     font-family: calibre_regular;
     font-size: 20px;
@@ -209,12 +174,12 @@
     color: white;
 }
 
-#projects_section .inverted .project_text .text p
+#projects_section .inverted .project_text .text p, #experience_section .inverted .project_text .text p
 {
     text-align: end;
 }
 
-#projects_section .project_text .tags
+#projects_section .project_text .tags, #experience_section .project_text .tags
 {
     display: flex;
     justify-content: flex-start;
@@ -226,14 +191,14 @@
     gap: 8px;
 }
 
-#projects_section .inverted .project_text .tags
+#projects_section .inverted .project_text .tags, #experience_section .inverted .project_text .tags
 {
     justify-content: flex-end;
     margin-left: 0px;
     margin-right: 9px;
 }
 
-#projects_section .project_text .tags a
+#projects_section .project_text .tags a, #experience_section .project_text .tags a
 {
     font-family: raleway_semi_bold;
     font-size: 16px;
@@ -245,12 +210,12 @@
     transition: opacity 0.2s ease;
 }
 
-#projects_section .project_text .tags a:hover
+#projects_section .project_text .tags a:hover, #experience_section .project_text .tags a:hover
 {
     opacity: 0.5;
 }
 
-#projects_section .project_text .links
+#projects_section .project_text .links, #experience_section .project_text .links
 {
     display: flex;
     justify-content: flex-end;
@@ -259,23 +224,23 @@
     gap: 20px;
 }
 
-#projects_section .inverted .project_text .links
+#projects_section .inverted .project_text .links, #experience_section .inverted .project_text .links
 {
     margin-left: 0px;
     margin-right: 15px;
 }
 
-#projects_section .project_text .links .github
+#projects_section .project_text .links .github, #experience_section .project_text .links .github
 {
     --color: rgb(181, 184, 192);
 }
 
-#projects_section .project_text .links .test
+#projects_section .project_text .links .test, #experience_section .project_text .links .test
 {
     --color: rgb(41, 168, 99);
 }
 
-#projects_section .project_text .links svg
+#projects_section .project_text .links svg, #experience_section .project_text .links svg
 {
     width: 21px;
     fill: none;
@@ -287,7 +252,7 @@
     transition: opacity 0.2s ease;
 }
 
-#projects_section .project_text .links svg:hover
+#projects_section .project_text .links svg:hover, #experience_section .project_text .links svg:hover
 {
     opacity: 0.6;
 }
@@ -403,7 +368,7 @@
 
 @media screen and (max-width: 780px)
 {
-    #projects_section .project
+    #projects_section .project, #experience_section .project
     {
         background-size: cover;
         background-position: center;
@@ -412,12 +377,12 @@
         transition: filter 0.3s ease;
     }
 
-    #projects_section .project:hover
+    #projects_section .project:hover, #experience_section .project:hover
     {
         filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.7));
     }
 
-    #projects_section .project_text
+    #projects_section .project_text, #experience_section .project_text
     {
         align-items: flex-start;
         margin-left: 0px;
@@ -429,23 +394,23 @@
 
     @media screen and (max-width: 500px)
     {
-        #projects_section .project_text
+        #projects_section .project_text, #experience_section .project_text
         {
             padding: 50px 25px 50px 25px;
         }
     }
 
-    #projects_section .project_text .type
+    #projects_section .project_text .type, #experience_section .project_text .type
     {
         margin-left: 0px;
     }
 
-    #projects_section .project_text .project_title
+    #projects_section .project_text .project_title, #experience_section .project_text .project_title
     {
         margin-left: 0px;
     }
 
-    #projects_section .project_text .text
+    #projects_section .project_text .text, #experience_section .project_text .text
     {
         background: none;
         box-shadow: none;
@@ -453,27 +418,27 @@
         padding: 10px 0px 8px 0px;
     }
 
-    #projects_section .project_text .text:hover
+    #projects_section .project_text .text:hover, #experience_section .project_text .text:hover
     {
         box-shadow: none;
     }
 
-    #projects_section .project_text .text p
+    #projects_section .project_text .text p, #experience_section .project_text .text p
     {
         color: white;
     }
 
-    #projects_section .project_text .tags
+    #projects_section .project_text .tags, #experience_section .project_text .tags
     {
         margin-left: -6px;
     }
 
-    #projects_section .project_text .links
+    #projects_section .project_text .links, #experience_section .project_text .links
     {
         margin-left: 0px;
     }
 
-    #projects_section .project_text .links .bubble
+    #projects_section .project_text .links .bubble, #experience_section .project_text .links .bubble
     {
         bottom: 15px;
     }
@@ -484,7 +449,7 @@
     margin-top: 5vh;
 }
 
-#projects_section{
+#projects_section, #experience_section{
     display: list-item;
 }
 
@@ -495,4 +460,8 @@
 .logos img{
     fill: white;
     stroke: white;
+}
+
+.section_title{
+    padding-top: 5vh;
 }

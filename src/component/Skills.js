@@ -3,8 +3,11 @@ import '../ressources/styles/skills.css';
 import moi from '../ressources/img/moi-1.jpg';
 import {skills} from '../ressources/json/skills.js';
 import SkillBox from "./SkillBox";
+import {useLanguage} from "./LanguageContext";
 
 function Skills(props) {
+
+    const { data } = useLanguage();
 
     const [type, setType] = useState({name: "Software Development",
         object: skills.software_developpement})
@@ -61,7 +64,7 @@ function Skills(props) {
         return (
             <section className="section" id="skills_section" style={{transform: "skewY(-5deg)"}}>
                 <div className="content leaning" style={{transform: "skewY(5deg)"}}>
-                    <span className="section_title">What are my Skills?</span>
+                    <span className="section_title">{data.mySkillsTitle}</span>
                     <div className="skills_content">
                         <div className="box">
                             <div className="menu" id="menu">
@@ -82,25 +85,25 @@ function Skills(props) {
         return (
             <section className="section" id="skills_section" style={{transform: "skewY(-5deg)"}}>
                 <div className="content leaning" style={{transform: "skewY(5deg)"}}>
-                    <span className="section_title">What are my Skills?</span>
+                    <span className="section_title">{data.mySkillsTitle}</span>
                     <div className="skills_content">
                         <div className="box">
                             {list.map((item, index) => (
                                 <div>
                                     <div className="category_title">{item.name}</div>
-                                    <div className="box_content">
-                                        <div className="skills_list">
-                                            {item.object.map((e, index) => (
-                                                <div className="skill">
-                                                    <img src={e.image}/>
-                                                    <div className="skill_name">
-                                                        <p>{e.name}</p>
+                                        <div className="box_content">
+                                            <div className="skills_list">
+                                                {item.object.map((e, index) => (
+                                                    <div className="skill">
+                                                        <img src={e.image}/>
+                                                        <div className="skill_name">
+                                                            <p>{e.name}</p>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            ))
-                                            }
+                                                ))
+                                                }
+                                            </div>
                                         </div>
-                                    </div>
                                 </div>
 
                             ))}
