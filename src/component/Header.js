@@ -144,6 +144,9 @@ function Header(props) {
                                 </svg>
                             </a>
                         </li>
+                        <li>
+                            <DownloadButton/>
+                        </li>
                     </ol>
                 </div>
             </div>
