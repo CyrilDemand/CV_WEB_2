@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CV_WEB_2/static/css/main.f49fdead.css",
-    "main.js": "/CV_WEB_2/static/js/main.6ef1b262.js",
+    "main.css": "/CV_WEB_2/static/css/main.1545652d.css",
+    "main.js": "/CV_WEB_2/static/js/main.73dd4a4f.js",
     "static/js/787.88f97ea9.chunk.js": "/CV_WEB_2/static/js/787.88f97ea9.chunk.js",
     "static/media/lightflix.png": "/CV_WEB_2/static/media/lightflix.1f95d8b81b25e2e3d323.png",
     "static/media/mode.png": "/CV_WEB_2/static/media/mode.ab96e63131ffec3ff5a9.png",
@@ -50,12 +50,12 @@
     "static/media/uk.svg": "/CV_WEB_2/static/media/uk.583699d9c65e0d7801742d879d53b007.svg",
     "static/media/french.svg": "/CV_WEB_2/static/media/french.71349a9961dd8ef26e8e9df8e03c0ef1.svg",
     "static/media/japan.svg": "/CV_WEB_2/static/media/japan.c4b1f700c50818f752e2c42d39592a36.svg",
-    "main.f49fdead.css.map": "/CV_WEB_2/static/css/main.f49fdead.css.map",
-    "main.6ef1b262.js.map": "/CV_WEB_2/static/js/main.6ef1b262.js.map",
+    "main.1545652d.css.map": "/CV_WEB_2/static/css/main.1545652d.css.map",
+    "main.73dd4a4f.js.map": "/CV_WEB_2/static/js/main.73dd4a4f.js.map",
     "787.88f97ea9.chunk.js.map": "/CV_WEB_2/static/js/787.88f97ea9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f49fdead.css",
-    "static/js/main.6ef1b262.js"
+    "static/css/main.1545652d.css",
+    "static/js/main.73dd4a4f.js"
   ]
 }
