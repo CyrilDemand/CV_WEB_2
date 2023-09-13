@@ -264,3 +264,29 @@ label span {
     border-color: #007BFF;
 }
 
+.button-container {
+    text-align: center;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px; /* Utilisez un grand border-radius pour obtenir une forme elliptique */
+    background-color: #ff7f00; /* Couleur orangée */
+    color: #fff; /* Couleur du texte en blanc */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Ajoute une transition au changement de couleur au survol */
+}
+
+.download-button:hover {
+    background-color: #ff6600; /* Couleur orangée légèrement plus foncée au survol */
+}
+
+.button p {
+    font-size: 1.3em;
+}
+
+.button:hover {
+    cursor: pointer;
+}

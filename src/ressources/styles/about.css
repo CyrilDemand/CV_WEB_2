@@ -52,7 +52,7 @@
 {
     width: -webkit-fit-content;
     width: -moz-fit-content;
-    width: fit-content;
+
     display: flex;
     justify-content: center;
     align-items: center;

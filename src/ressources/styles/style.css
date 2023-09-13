@@ -35,7 +35,7 @@
 
 @media screen and (max-width: 1400px) { .content { padding: 0px 150px; } }
 @media screen and (max-width: 1150px) { .content { padding: 0px 100px; } }
-@media screen and (max-width: 1020px) { .content { padding: 0px 50px; } }
+@media screen and (max-width: 1020px) { .content {  padding: 0px 50px; max-width: 75%;} }
 @media screen and (max-width: 500px) { .content { padding: 0px 25px; } }
 
 .section_end

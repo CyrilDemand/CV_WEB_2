@@ -4,13 +4,13 @@ import moi from '../ressources/img/moi-1.jpg';
 import {useLanguage} from "./LanguageContext";
 function About(props) {
 
-    const { data } = useLanguage();
+    const { data, windowWidth } = useLanguage();
 
     return(
         <section className="section" id="about_section" style={{transform: "skewY(-5deg)"}}>
             <div className="content" style={{transform: "skewY(5deg)"}}>
                 <span className="section_title">{data.aboutMeTitle}</span>
-                <div className="about_content">
+                <div className="about_content" style={{display: windowWidth > 1800 ? "flex" : "table-column"}}>
                     <p className="p_1">
                         {data.aboutMeDescription1}<br/><br/>
                         {data.aboutMeDescription2}<br/><br/>
@@ -18,7 +18,7 @@ function About(props) {
                         {data.aboutMeDescription4}<br/><br/>
                         {data.aboutMeDescription5}<br/><br/>
                     </p>
-                    <div className="photo">
+                    <div className="photo" >
                         <img src={moi} alt="photo" width="760px"
                              height="760px"/>
                     </div>

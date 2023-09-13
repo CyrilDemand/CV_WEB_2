@@ -146,6 +146,9 @@
 
 @media screen and (max-width: 930px)
 {
+    .boxbox{
+        width: 100%;
+    }
     #skills_section .box
     {
         display: flex;

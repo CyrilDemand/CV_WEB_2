@@ -23,7 +23,6 @@
 
 #projects_section .other_project
 {
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;

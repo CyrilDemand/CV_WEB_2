@@ -98,14 +98,13 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    margin-right: -100px;
+    margin-right: -10vw;
 }
 
 #projects_section .inverted .project_text, #experience_section .inverted .project_text
 {
     align-items: flex-end;
-    margin-left: -100px;
-    margin-right: 0px;
+    margin-left: -10vw;
 }
 
 #projects_section .project_text .type, #experience_section .project_text .type
@@ -132,7 +131,7 @@
 #projects_section .project_text .project_title, #experience_section .project_text .project_title
 {
     font-family: calibre_semi_bold;
-    font-size: 32px;
+    font-size: 2em;
     color: white;
     text-decoration: none;
     margin-bottom: 12px;
@@ -189,6 +188,10 @@
     margin-bottom: 17px;
     margin-left: 9px;
     gap: 8px;
+}
+
+.tags{
+    color: white;
 }
 
 #projects_section .inverted .project_text .tags, #experience_section .inverted .project_text .tags

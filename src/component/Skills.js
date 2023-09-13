@@ -7,26 +7,13 @@ import {useLanguage} from "./LanguageContext";
 
 function Skills(props) {
 
-    const { data } = useLanguage();
+    const { data, windowWidth } = useLanguage();
 
     const [type, setType] = useState({name: "Software Development",
         object: skills.software_developpement})
 
     const [selectorTop, setSelectorTop] = useState(0);
     const [selectorHeight, setSelectorHeight] = useState(25);
-
-
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-    const setWindowDimensions = () => {
-        setWindowWidth(window.innerWidth)
-    }
-
-    useEffect(() => {
-        window.addEventListener('resize', setWindowDimensions);
-        return () => {
-            window.removeEventListener('resize', setWindowDimensions)
-        }
-    }, [])
 
     function setTruc(type) {
          setType(type);
@@ -89,7 +76,7 @@ function Skills(props) {
                     <div className="skills_content">
                         <div className="box">
                             {list.map((item, index) => (
-                                <div>
+                                <div className="boxbox">
                                     <div className="category_title">{item.name}</div>
                                         <div className="box_content">
                                             <div className="skills_list">

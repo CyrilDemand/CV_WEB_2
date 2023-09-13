@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, {createContext, useContext, useEffect, useState} from 'react';
 import fr from '../lang/fr.json';
 import en from '../lang/en.json';
 import jp from '../lang/jp.json';
@@ -17,7 +17,17 @@ export const useLanguage = () => {
 export const LanguageProvider = ({ children }) => {
     const [language, setLanguage] = useState('en'); // 'en' est la langue par défaut
     const [data, setData] = useState(en);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+    const setWindowDimensions = () => {
+        setWindowWidth(window.innerWidth)
+    }
 
+    useEffect(() => {
+        window.addEventListener('resize', setWindowDimensions);
+        return () => {
+            window.removeEventListener('resize', setWindowDimensions)
+        }
+    }, [])
     const changeLangue = (langue) => {
         setLanguage(langue);
         switch (langue) {
@@ -40,7 +50,7 @@ export const LanguageProvider = ({ children }) => {
     }
 
     return (
-        <LanguageContext.Provider value={{ language, changeLangue, data }}>
+        <LanguageContext.Provider value={{ language, changeLangue, data, windowWidth }}>
             {children}
         </LanguageContext.Provider>
     );

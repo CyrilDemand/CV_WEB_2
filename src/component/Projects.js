@@ -6,21 +6,10 @@ import {experiences} from "../ressources/json/experience.js";
 import {useLanguage} from "./LanguageContext";
 function Projects({projecst, experience}) {
 
-    const { language, data } = useLanguage();
+    const { language, data, windowWidth } = useLanguage();
 
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
     let projectsImaged = [];
     let projectsWithoutImage = [];
-    const setWindowDimensions = () => {
-        setWindowWidth(window.innerWidth)
-    }
-
-    useEffect(() => {
-        window.addEventListener('resize', setWindowDimensions);
-        return () => {
-            window.removeEventListener('resize', setWindowDimensions)
-        }
-    }, [])
 
     if (projecst) {
         projectsImaged = projects.projectsImaged;
@@ -71,7 +60,7 @@ function Projects({projecst, experience}) {
                             <span></span>
                             <span>{project.date}</span>
                         </div>
-                        <a className="project_title" href={project.link} target="_blank">${project.title}</a>
+                        <a className="project_title" href={project.link} target="_blank">{project.title}</a>
                         <div className="text"><p>{project.description[language]}</p></div>
                         { projecst ?
                         <div className="links">

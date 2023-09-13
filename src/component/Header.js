@@ -3,6 +3,7 @@ import '../ressources/styles/header.css';
 import '../ressources/styles/menu.css';
 import { useEffect, useState } from "react";
 import {useLanguage} from "./LanguageContext";
+import DownloadButton from "./DownloadButton";
 
 function Header(props) {
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -100,6 +101,9 @@ function Header(props) {
                                     <a className="button" href="#contact_section">
                                         <p>{data.headerContact}</p>
                                     </a>
+                                </li>
+                                <li className="contact">
+                                    <DownloadButton/>
                                 </li>
                             </ol>
                         </div>
