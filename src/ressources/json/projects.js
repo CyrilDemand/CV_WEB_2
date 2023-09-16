@@ -23,10 +23,10 @@ export const projects = {
                 },
                 date: "2022",
                 description: {
-                    en: "A desktop application to see 3D models of objects in .ply files",
-                    fr: "Une application de bureau pour voir des modèles 3D d'objets dans des fichiers .ply",
-                    es: "Una aplicación de escritorio para ver modelos 3D de objetos en archivos .ply",
-                    jp: ".plyファイルのオブジェクトの3Dモデルを表示するデスクトップアプリケーション"
+                    en: "A desktop application to see 3D models of objects from .ply files",
+                    fr: "Une application de bureau pour voir des modèles 3D d'objets depuis des fichiers .ply",
+                    es: "Una aplicación de escritorio para ver modelos 3D de objetos desde archivos .ply",
+                    jp: ".plyファイルからオブジェクトの3Dモデルを表示するデスクトップアプリケーション"
                 },
                 technologies: "Java, JavaFX",  // Technologie names remain same
                 link: "https://github.com/CyrilDemand/treasure_map",

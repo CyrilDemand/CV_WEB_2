@@ -1,8 +1,8 @@
 import React, {createContext, useContext, useEffect, useState} from 'react';
-import fr from '../lang/fr.json';
-import en from '../lang/en.json';
-import jp from '../lang/jp.json';
-import es from '../lang/es.json';
+import fr from '../ressources/lang/fr.json';
+import en from '../ressources/lang/en.json';
+import jp from '../ressources/lang/jp.json';
+import es from '../ressources/lang/es.json';
 
 const LanguageContext = createContext();
 

@@ -23,7 +23,7 @@ export const experiences = {
                     en: "A 3 years long apprenticeship in which I worked on 3 different web applications for " +
                         "the ANTS, the french departement of the country which manage identity  documents." +
                         "I developped new fonctionnalities, did some unit tests, integration tests, security audit, benchmark and more.",
-                    fr: "Un apprentissage de 3 ans au cours duquel j'ai travaillé sur 3 applications Web différentes pour " +
+                    fr: "Une alternance de 3 ans au cours duquel j'ai travaillé sur 3 applications web différentes pour " +
                         "l'ANTS, le département français du pays qui gère les documents d'identité." +
                         "J'ai développé de nouvelles fonctionnalités, fait des tests unitaires, des tests d'intégration, un audit de sécurité, un benchmark et plus encore.",
                     es: "Un aprendizaje de 3 años en el que trabajé en 3 aplicaciones web diferentes para " +
@@ -56,11 +56,11 @@ export const experiences = {
                 date: "2022",
                 description: {
                     en: "A 3 months internship in the military base of Creil in which I worked" +
-                        " on a web application to manage the military map of the french army.",
+                        " on a web application to manage the stock of paper map of the french army.",
                     fr: "Un stage de 3 mois dans la base militaire de Creil au cours duquel j'ai travaillé" +
-                        " sur une application web pour gérer la carte militaire de l'armée française.",
+                        " sur une application web pour gérer le stock de carte papier du ministère des armées.",
                     es: "Una pasantía de 3 meses en la base militar de Creil en la que trabajé" +
-                        " en una aplicación web para administrar el mapa militar del ejército francés.",
+                        " en una aplicación web para administrar el stock de mapas en papel del Ministerio de Defensa.",
                     jp: "クレイユの軍事基地での3か月間のインターンシップで、私はフランス軍の軍事地図を管理するためのWebアプリケーションで働きました。"
                 },
                 technologies: "React Express MySQL",
