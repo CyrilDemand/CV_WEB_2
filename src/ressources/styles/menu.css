@@ -53,9 +53,9 @@
 {
     display: flex;
     pointer-events: all;
-    padding: 15px 22.5px;
+    padding: 5px 5px;
     font-family: raleway_semi_bold;
-    font-size: 20px;
+    font-size: 3vh;
     color: white;
     text-decoration: none;
 }

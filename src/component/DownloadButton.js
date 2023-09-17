@@ -1,12 +1,12 @@
 import React from 'react';
 import {useLanguage} from "./LanguageContext";
-import frenchResume from '../ressources/pdf/CV_Cyril_Demand.pdf';
-import englishResume from '../ressources/pdf/Resume_Cyril_Demand.pdf';
-import japaneseResume from '../ressources/pdf/Japanese_CV_Cyril_Demand.pdf';
+import frenchResume from '../ressources/pdf/CV_Cyril_Demand_fr.pdf';
+import englishResume from '../ressources/pdf/CV_Cyril_Demand_en.pdf';
+import japaneseResume from '../ressources/pdf/履歴書_Cyril_Demand.pdf';
 import {BsDownload} from "react-icons/bs";
 function DownloadButton(props) {
 
-    const {language} = useLanguage();
+    const {language, data} = useLanguage();
 
     const handleDownloadClick = () => {
         // Logique pour le téléchargement du PDF ici
@@ -35,11 +35,11 @@ function DownloadButton(props) {
         // Retirez l'élément <a> de la page une fois le téléchargement terminé
         document.body.removeChild(link);
     };
-
+    console.log(data.cv)
 
     return (
         <div onClick={handleDownloadClick} className="button">
-            <p>CV <BsDownload/> </p>
+            <p>{data.cv}<BsDownload/> </p>
         </div>
     );
 
