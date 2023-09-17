@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3754425c.css",
-    "main.js": "/static/js/main.3cfcf659.js",
+    "main.js": "/static/js/main.209e73a7.js",
     "static/js/787.88f97ea9.chunk.js": "/static/js/787.88f97ea9.chunk.js",
     "static/media/lightflix.png": "/static/media/lightflix.1f95d8b81b25e2e3d323.png",
     "static/media/履歴書_Cyril_Demand.pdf": "/static/media/履歴書_Cyril_Demand.7e2c0889ab55918628b4.pdf",
@@ -54,11 +54,11 @@
     "static/media/french.svg": "/static/media/french.71349a9961dd8ef26e8e9df8e03c0ef1.svg",
     "static/media/japan.svg": "/static/media/japan.c4b1f700c50818f752e2c42d39592a36.svg",
     "main.3754425c.css.map": "/static/css/main.3754425c.css.map",
-    "main.3cfcf659.js.map": "/static/js/main.3cfcf659.js.map",
+    "main.209e73a7.js.map": "/static/js/main.209e73a7.js.map",
     "787.88f97ea9.chunk.js.map": "/static/js/787.88f97ea9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3754425c.css",
-    "static/js/main.3cfcf659.js"
+    "static/js/main.209e73a7.js"
   ]
 }
