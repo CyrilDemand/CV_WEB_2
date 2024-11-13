@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3754425c.css",
-    "main.js": "/static/js/main.e25da25f.js",
+    "main.js": "/static/js/main.3e7a8184.js",
     "static/js/787.88f97ea9.chunk.js": "/static/js/787.88f97ea9.chunk.js",
     "static/media/lightflix.png": "/static/media/lightflix.1f95d8b81b25e2e3d323.png",
     "static/media/履歴書_Cyril_Demand.pdf": "/static/media/履歴書_Cyril_Demand.7e2c0889ab55918628b4.pdf",
@@ -27,7 +27,7 @@
     "static/media/Unix.svg": "/static/media/Unix.1ec408dec54e8707a8677af4e8341869.svg",
     "static/media/Andoird.svg": "/static/media/Andoird.788e339b33d2529f5dd04d9328f7721f.svg",
     "static/media/Python.svg": "/static/media/Python.e42d363f6d0d4d9c44fe4535f169c2af.svg",
-    "static/media/React.svg": "/static/media/React.f57b349b4d9df56c9b48c916a8d5adfb.svg",
+    "static/media/React.svg": "/static/media/React.22a05374f4eefdd120b71df3f98d68a1.svg",
     "static/media/Java.svg": "/static/media/Java.37faf7e9412e246e424fc588d8218e77.svg",
     "static/media/Neural_network.svg": "/static/media/Neural_network.529fe301d4412c45c65b0bb1791933fc.svg",
     "static/media/GitHub.svg": "/static/media/GitHub.fea799ad6fd86dfacc24d336dfea063f.svg",
@@ -36,7 +36,7 @@
     "static/media/Mail.svg": "/static/media/Mail.2dc2654cb73e04fbe45529a22d1ca3f2.svg",
     "static/media/C.svg": "/static/media/C.7e46e719292a78a464524ad36d1ad3d2.svg",
     "static/media/Flutter.svg": "/static/media/Flutter.5e0ebde82050c8fcdf6121b4498b520c.svg",
-    "static/media/Thymeleaf.svg": "/static/media/Thymeleaf.fbf988b02e4926d975ac0147f4c861e7.svg",
+    "static/media/Thymeleaf.svg": "/static/media/Thymeleaf.105bd8958aba3eb6677038256364c2be.svg",
     "static/media/Discord.svg": "/static/media/Discord.bbcaa1cd43df90e147fc3921017227ee.svg",
     "static/media/Linkedin.svg": "/static/media/Linkedin.ece551a89bc1b9665c1df80701f45e2e.svg",
     "static/media/Rust.svg": "/static/media/Rust.c88d6431f90e091e143713be9fe4064c.svg",
@@ -49,16 +49,16 @@
     "static/media/Sql.svg": "/static/media/Sql.167c1f87dcecbaeadbc5a53f0615643e.svg",
     "static/media/Expressjs.svg": "/static/media/Expressjs.632d3c32e6c8f71f7f7faf4fb71b945b.svg",
     "static/media/JavaFX.svg": "/static/media/JavaFX.586929ddf0c7cbad3af83d1b5c4923a9.svg",
-    "static/media/Docker.svg": "/static/media/Docker.c510bf4034a4d1d97085e5234d3db1bf.svg",
-    "static/media/uk.svg": "/static/media/uk.583699d9c65e0d7801742d879d53b007.svg",
-    "static/media/french.svg": "/static/media/french.71349a9961dd8ef26e8e9df8e03c0ef1.svg",
-    "static/media/japan.svg": "/static/media/japan.c4b1f700c50818f752e2c42d39592a36.svg",
+    "static/media/Docker.svg": "/static/media/Docker.fcf932d5d1e6a956514f2b35e1d32f59.svg",
+    "static/media/uk.svg": "/static/media/uk.b900c9a502cdcc4b9112a49218ade551.svg",
+    "static/media/french.svg": "/static/media/french.31c85019a986ff5ebab74a6994a01113.svg",
+    "static/media/japan.svg": "/static/media/japan.d98ffc0c0849eca481350de326129d37.svg",
     "main.3754425c.css.map": "/static/css/main.3754425c.css.map",
-    "main.e25da25f.js.map": "/static/js/main.e25da25f.js.map",
+    "main.3e7a8184.js.map": "/static/js/main.3e7a8184.js.map",
     "787.88f97ea9.chunk.js.map": "/static/js/787.88f97ea9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3754425c.css",
-    "static/js/main.e25da25f.js"
+    "static/js/main.3e7a8184.js"
   ]
 }
